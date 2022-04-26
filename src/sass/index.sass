@@ -1,0 +1,159 @@
+@font-face
+    font-family: "Roboto"
+    src: url("../assets/fonts/Roboto-Regular.ttf") format('truetype')
+    font-weight: 400
+
+@font-face
+    font-family: "Roboto"
+    src: url("../assets/fonts/Roboto-Bold.ttf") format('truetype')
+    font-weight: 700
+
+*
+    box-sizing: border-box
+
+html
+    margin: 0
+    padding: 0
+    font-family: "Roboto", sans-serif
+    font-size: 14px
+
+body
+    margin: 0
+    padding: 0
+    min-height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    background: linear-gradient(270deg, #b0e7ff, #ffdbf7)
+    background-size: 400% 400%
+    animation: gradient 5s ease infinite
+
+.main
+    background: #ffffffa9
+    border-radius: 20px
+    width: 568px
+    padding: 20px
+
+.avatar
+    width: 200px
+    height: 200px
+    display: block
+    margin: 0 auto
+
+.nickname
+    font-size: 2rem
+    text-align: center
+    margin: 15px 0
+
+.position
+    font-size: 1.75rem
+    margin: 0 0 15px
+    font-weight: normal
+    text-align: center
+
+.row
+    display: flex
+
+.info
+
+    &__row
+        justify-content: space-between
+
+    &__column
+        align-items: center
+        padding: 7.5px
+
+.icon
+    width: 26px
+    height: 26px
+
+    &_large
+        width: 36px
+        height: 36px
+
+.text
+    margin: 0 0 0 15px
+    font-size: 1.2rem
+
+.link
+    text-decoration: none
+    color: black
+
+.subtitle
+    margin: 0 0 7.5px
+    font-size: 1.2rem
+
+.portfolio
+    margin: 15px 0
+
+    &__row
+        justify-content: space-between
+
+    &__column
+        flex-direction: column
+        flex: 0 0 45%
+
+.list
+    display: flex
+    flex-wrap: wrap
+    list-style: none
+    padding: 0
+    margin: 0
+
+.item
+    margin: 3.5px
+
+.contacts
+    margin: 30px 0 0
+
+    &__row
+        justify-content: center
+
+    &__column
+        margin: 0 5px
+
+@media screen and (max-width: 568px)
+
+    .main
+        min-height: 100vh
+        display: flex
+        flex-direction: column
+        border-radius: 0
+
+    .info
+
+        &__row
+            justify-content: center
+            flex-wrap: wrap
+
+    .portfolio
+        flex: 1 1 auto
+
+        &__column
+            flex: 0 0 48%
+
+@media screen and (max-width: 420px)
+
+    .avatar
+        width: 140px
+        height: 140px
+
+    .portfolio
+
+        &__row
+            flex-wrap: wrap
+
+        &__column
+            flex: 0 0 100%
+            margin: 0 0 15px
+
+@keyframes gradient
+
+    0%
+        background-position: 0% 51%
+
+    50%
+        background-position: 100% 50%
+
+    100%
+        background-position: 0% 51%
